@@ -5,6 +5,24 @@ see http://stackoverflow.com/questions/6871996/css-two-inline-block-width-50-ele
     font-size: 0;
 }
 
+.wrapper {
+	display: inline-block;
+	width: 100%;				/*whenever inline-block, make sure you make the width 100%*/
+	font-size: 2em;
+	border: 2px solid white;
+	background-color: #dad9d9;
+}
+
+#photo {
+	height: 400px;
+	background-color: gray;
+}
+
+#photo p {
+	font-size: 2rem;
+	color: white;
+	text-align: center;
+}
 
 /* Box sizing */
 
@@ -14,3 +32,19 @@ see http://stackoverflow.com/questions/6871996/css-two-inline-block-width-50-ele
 
 
 /* Assign styles here */
+
+@media screen and (min-width: 768px) {
+	.wrapper {
+		width: 50%;
+	}
+
+	#photo p {
+		display: none; /*display: none vs. display:hidden;*/
+	}
+
+	#photo {
+		background-image: url("../imgs/ex-1-large.png");
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+}
